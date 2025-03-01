@@ -5,17 +5,62 @@
 
 :root {
   --background: #EFEFEF;
+  --background2: #DDE5F8;
   --foreground: #171717;
-  --primary: #613F75;
-  --secondary: #CFBFF7;
-  --highlight1: #BC4749;
-  --highlight2: #FFBFA0;
+  --foreground2: #151E25;
+
+  --primary: #353A68;
+  --secondary: #C3C9E9;
+  --highlight1: #003D66;
+  --highlight2: #8EAAD4;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #171717;
-  --foreground: #EFEFEF;
+    --background2: #151E25;
+    --foreground: #EFEFEF;
+    --foreground2: #DDE5F8;
+
+    --primary: #C3C9E9;
+    --secondary: #353A68;
+    --highlight1: #8EAAD4;
+    --highlight2: #003D66;
+  }
+}
+
+
+@layer base {
+  h1 {
+    @apply font-sans text-5xl font-bold text-primary;
+  }
+
+  h2 {
+    @apply font-sans text-4xl font-bold text-primary;
+  }
+
+  h3 {
+    @apply font-sans text-xl font-bold;
+  }
+
+  h4 {
+    @apply font-montserrat italic;
+  }
+
+  h5 {
+    @apply font-sans text-3xl font-bold;
+  }
+
+  h6 {
+    @apply font-sans text-lg font-bold text-gray-500;
+  }
+
+  p {
+    @apply font-montserrat;
+  }
+
+  ul {
+    @apply list-disc pl-6 mb-4 font-montserrat;
   }
 }
 
@@ -24,5 +69,3 @@ body {
   color: var(--foreground);
   background: var(--background);
 }
-
-

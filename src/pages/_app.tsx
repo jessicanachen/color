@@ -1,3 +1,4 @@
+import DefaultLayout from "@/layouts/DefaultLayout";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Open_Sans, Montserrat } from 'next/font/google'
@@ -5,7 +6,7 @@ import { Open_Sans, Montserrat } from 'next/font/google'
 const openSans = Open_Sans({
   subsets: ['latin'],
   variable: '--font-open-sans',
-  weight: ['400', '700'], 
+  weight: ['400', '700'],
 })
 
 const montserrat = Montserrat({
@@ -22,7 +23,9 @@ export const metadata = {
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={`${openSans.variable} ${montserrat.variable}`}>
-      <Component {...pageProps} />
+      <DefaultLayout>
+        <Component {...pageProps} />
+      </DefaultLayout>
     </div>
   )
 }
