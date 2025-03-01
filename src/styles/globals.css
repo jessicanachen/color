@@ -58,10 +58,17 @@
   p {
     @apply font-montserrat;
   }
+}
 
-  ul {
-    @apply list-disc pl-6 mb-4 font-montserrat;
-  }
+
+.logo {
+  @apply font-sans text-3xl font-bold text-primary;
+}
+.navlinks {
+  @apply font-sans text-xl;
+}
+.menunavlinks {
+  @apply font-sans
 }
 
 
